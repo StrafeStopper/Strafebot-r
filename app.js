@@ -1,9 +1,9 @@
 require('dotenv').config()
 
-const Snoowrap = require('snoowrap')
-const Snoostorm = require('snoostorm')
+var Snoowrap = require('snoowrap')
+var Snoostorm = require('snoostorm')
 
-const r = new Snoowrap({
+var r = new Snoowrap({
     userAgent: 'reddit-bot-example-node',
     clientId: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
@@ -11,16 +11,16 @@ const r = new Snoowrap({
     password: process.env.REDDIT_PASS
 })
 
-const client = new Snoostorm(r)
+var client = new Snoostorm(r)
 
 // Configure options for stream: subreddit & results per query
-const streamOpts = {
+var streamOpts = {
     subreddit: 'NoahBM',
     results: 25
 }
 
 // Create a Snoostorm CommentStream with the specified options
-const comments = client.CommentStream(streamOpts)
+var comments = client.CommentStream(streamOpts)
 
 // On comment, perform whatever logic you want to do
 /*comments.on('comment', (comment) => {
