@@ -1,4 +1,4 @@
 :loop
-node app
+python bot.py
 #pause
-goto loop 
+goto loop
