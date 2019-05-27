@@ -8,9 +8,9 @@ REPLY = ["test sucessful"]
 
 def main():
     reddit = praw.Reddit(
-        user_agent=cfg.login['agent'],
-        client_id=cfg.login['id'], client_secret=cfg.login['secret'],
-        username=cfg.login['user'], password=cfg.login['pass'],
+        user_agent=cfg.login['user_agent'],
+        client_id=cfg.login['client_id'], client_secret=cfg.login['client_secret'],
+        username=cfg.login['username'], password=cfg.login['password'],
     )
 
     subreddit = reddit.subreddit('NoahBM')
